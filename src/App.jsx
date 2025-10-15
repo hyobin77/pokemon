@@ -1,22 +1,18 @@
 import './App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
+import PokemonList from './pages/PokemonList'
+import PokemonDetail from './pages/PokemonDetail'
 
 function App() {
   return (
     <>
-      <nav>
-        <Link to="/">홈</Link> | <Link to ="/about">소개</Link>
-      </nav>
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/ > } />
+        <Route path="/" element={<PokemonList />} />
+        <Route path="/pokemon/:id" element={<PokemonDetail/ > } />
       </Routes>
     </>
     
   )
 }
 
-const Home = () => <h2>홈 페이지</h2>
-const About = () => <h2>소개 페이지</h2>
 export default App
