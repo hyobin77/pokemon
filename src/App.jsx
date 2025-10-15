@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <nav>
         <Link to="/">홈</Link> | <Link to ="/about">소개</Link>
       </nav>
@@ -12,7 +12,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/ > } />
       </Routes>
-    </BrowserRouter>
+    </>
+    
   )
 }
 
